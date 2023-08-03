@@ -1,0 +1,9 @@
+{
+  "name": "test",
+  "inject_logic": {
+    "occurrences": 2,
+    "program_path": "/root/aoptrace/AOP-GDB/inject_program.c",
+    "condition": "no"
+  },
+  "inject_point": "17"
+}

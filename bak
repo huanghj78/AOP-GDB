@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+__attribute__((constructor))
+void inject()
+{
+  // @read query_string
+  int x = 1;
+  b = a + x;
+  char buf[100];
+  FILE* fp = fopen("/root/aoptrace/AOP-GDB/tmp", "w");
+  fwrite(query_string, sizeof(char), strlen(query_string), fp);
+  fclsoe(fp);
+  // @write b
+}
